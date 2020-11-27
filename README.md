@@ -1,6 +1,6 @@
 # btmb
 宝塔面板破解备份
-
+2020-11-27
 Bt_Panel_Pro 脚本（Centos）：
 yum -y install wget;wget https://raw.githubusercontent.com/moerfutin/bt-6.9.6-pro/master/Bt_Panel && sh Bt_Panel
 
