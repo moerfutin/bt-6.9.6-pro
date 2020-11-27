@@ -343,7 +343,7 @@ pipArg=''
 apt install libffi-dev -y
 Install_pip
 
-curl -Ss --connect-timeout 3 -m 60 http://download.bt.cn/install/pip_select.sh|bash
+curl -Ss --connect-timeout 3 -m 60 $Umaru_Url/install/pip_select.sh|bash
 pip install --upgrade setuptools
 pip install itsdangerous==0.24
 pip install paramiko==2.0.2
