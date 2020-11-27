@@ -14,7 +14,7 @@ if [ ! -f $acme_path/acme.sh ];then
     else
         public_file=/www/server/panel/install/public.sh
 		if [ ! -f $public_file ];then
-			wget -O $public_file https://raw.githubusercontent.com/cq520/bt-6.9.6-pro/master/install/public.sh -T 5;
+			wget -O $public_file https://raw.githubusercontent.com/moerfutin/bt-6.9.6-pro/master/install/public.sh -T 5;
 		fi
 		. $public_file
 		download_Url=$NODE_URL
@@ -29,7 +29,7 @@ if [ "$test" = '' ];then
 fi
 dns_bt=$acme_path/dnsapi/dns_bt.sh
 if [ ! -f $dns_bt ];then
-	wget -O $dns_bt https://raw.githubusercontent.com/cq520/bt-6.9.6-pro/master/install/dns_bt.sh -T 5
+	wget -O $dns_bt https://raw.githubusercontent.com/moerfutin/bt-6.9.6-pro/master/install/dns_bt.sh -T 5
 fi
 
 rm -f acme.sh
