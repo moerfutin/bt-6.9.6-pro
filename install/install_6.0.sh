@@ -123,7 +123,7 @@ echo '---------------------------------------------';
 echo "Selected download node...";
 get_node_url
 download_Url=$NODE_URL
-Umaru_Url=https://raw.githubusercontent.com/cq520/bt-6.9.6-pro/master
+Umaru_Url=https://raw.githubusercontent.com/moerfutin/bt-6.9.6-pro/master
 echo "Download node: $download_Url";
 echo '---------------------------------------------';
 setup_path=/www
@@ -467,7 +467,7 @@ Install_webpy()
 Install_setuptools
 Install_pip
 
-curl -Ss --connect-timeout 3 -m 60 https://raw.githubusercontent.com/cq520/bt-6.9.6-pro/master/install/pip_select.sh|bash
+curl -Ss --connect-timeout 3 -m 60 https://raw.githubusercontent.com/moerfutin/bt-6.9.6-pro/master/install/pip_select.sh|bash
 
 isPsutil=`python -m psutil 2>&1|grep package`
 if [ "$isPsutil" != "" ];then
