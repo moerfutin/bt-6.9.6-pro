@@ -100,7 +100,7 @@ echo '---------------------------------------------';
 echo "Selected download node...";
 get_node_url
 download_Url=$NODE_URL
-Umaru_Url=https://github.com/cq520/bt-6.9.6-pro/blob/master
+Umaru_Url=https://github.com/moerfutin/bt-6.9.6-pro/master
 echo "Download node: $download_Url";
 echo '---------------------------------------------';
 setup_path=/www
