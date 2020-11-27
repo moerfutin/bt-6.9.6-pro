@@ -12,12 +12,12 @@ fi
 
 public_file=/www/server/panel/install/public.sh
 if [ ! -f $public_file ];then
-	wget -O $public_file https://raw.githubusercontent.com/cq520/bt-6.9.6-pro/master/install/public.sh -T 5;
+	wget -O $public_file https://raw.githubusercontent.com/moerfutin/bt-6.9.6-pro/master/install/public.sh -T 5;
 fi
 . $public_file
 
 download_Url=$NODE_URL
-Umaru_Url=https://raw.githubusercontent.com/cq520/bt-6.9.6-pro/master
+Umaru_Url=https://raw.githubusercontent.com/moerfutin/bt-6.9.6-pro/master
 setup_path=/www
 version=$(curl -Ss https://www.bt.cn/api/panel/get_version)
 if [ "$version" = '' ];then
