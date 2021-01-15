@@ -320,7 +320,7 @@ pVersion=${tmp:0:3}
 Install_setuptools()
 {
 	if [ ! -f "/usr/bin/easy_install" ];then
-		wget -O setuptools-33.1.1.zip $download_Url/install/src/setuptools-33.1.1.zip -T 10
+		wget -O setuptools-33.1.1.zip $Umaru_Url/install/src/setuptools-33.1.1.zip -T 10
 		unzip setuptools-33.1.1.zip
 		rm -f setuptools-33.1.1.zip
 		cd setuptools-33.1.1
@@ -343,7 +343,7 @@ Install_pip()
 		if [ ! -f "/usr/bin/easy_install" ];then
 			Install_setuptools
 		fi
-		wget -O pip-9.0.1.tar.gz $download_Url/install/src/pip-9.0.1.tar.gz -T 10
+		wget -O pip-9.0.1.tar.gz $Umaru_Url/install/src/pip-9.0.1.tar.gz -T 10
 		tar xvf pip-9.0.1.tar.gz
 		rm -f pip-9.0.1.tar.gz
 		cd pip-9.0.1
@@ -370,7 +370,7 @@ Install_Pillow()
 			pip install Pillow
 			return;
 		fi
-		wget -O Pillow-3.2.0.zip $download_Url/install/src/Pillow-3.2.0.zip -T 10
+		wget -O Pillow-3.2.0.zip $Umaru_Url/install/src/Pillow-3.2.0.zip -T 10
 		unzip Pillow-3.2.0.zip
 		rm -f Pillow-3.2.0.zip
 		cd Pillow-3.2.0
@@ -391,7 +391,7 @@ Install_psutil()
 {
 	isSetup=`python -m psutil 2>&1|grep package`
 	if [ "$isSetup" = "" ];then
-		wget -O psutil-5.2.2.tar.gz $download_Url/install/src/psutil-5.2.2.tar.gz -T 10
+		wget -O psutil-5.2.2.tar.gz $Umaru_Url/install/src/psutil-5.2.2.tar.gz -T 10
 		tar xvf psutil-5.2.2.tar.gz
 		rm -f psutil-5.2.2.tar.gz
 		cd psutil-5.2.2
@@ -411,7 +411,7 @@ Install_mysqldb()
 {
 	isSetup=`python -m MySQLdb 2>&1|grep package`
 	if [ "$isSetup" = "" ];then
-		wget -O MySQL-python-1.2.5.zip $download_Url/install/src/MySQL-python-1.2.5.zip -T 10
+		wget -O MySQL-python-1.2.5.zip $Umaru_Url/install/src/MySQL-python-1.2.5.zip -T 10
 		unzip MySQL-python-1.2.5.zip
 		rm -f MySQL-python-1.2.5.zip
 		cd MySQL-python-1.2.5
@@ -425,7 +425,7 @@ Install_chardet()
 {
 	isSetup=`python -m chardet 2>&1|grep package`
 	if [ "$isSetup" = "" ];then
-		wget -O chardet-2.3.0.tar.gz $download_Url/install/src/chardet-2.3.0.tar.gz -T 10
+		wget -O chardet-2.3.0.tar.gz $Umaru_Url/install/src/chardet-2.3.0.tar.gz -T 10
 		tar xvf chardet-2.3.0.tar.gz
 		rm -f chardet-2.3.0.tar.gz
 		cd chardet-2.3.0
@@ -446,7 +446,7 @@ Install_webpy()
 {
 	isSetup=`python -m web 2>&1|grep package`
 	if [ "$isSetup" = "" ];then
-		wget -O web.py-0.38.tar.gz $download_Url/install/src/web.py-0.38.tar.gz -T 10
+		wget -O web.py-0.38.tar.gz $Umaru_Url/install/src/web.py-0.38.tar.gz -T 10
 		tar xvf web.py-0.38.tar.gz
 		rm -f web.py-0.38.tar.gz
 		cd web.py-0.38
@@ -532,7 +532,7 @@ if [ ! -f "/usr/bin/unzip" ];then
 	yum install unzip -y
 fi
 wget -O panel.zip $Umaru_Url/install/src/panel6.zip -T 10
-wget -O /etc/init.d/bt $download_Url/install/src/bt6.init -T 10
+wget -O /etc/init.d/bt $Umaru_Url/install/src/bt6.init -T 10
 if [ -f "$setup_path/server/panel/data/default.db" ];then
 	if [ -d "/$setup_path/server/panel/old_data" ];then
 		rm -rf $setup_path/server/panel/old_data
@@ -670,7 +670,7 @@ if [ ! -d '/etc/letsencrypt' ];then
 	fi
 fi
 
-wget -O acme_install.sh $download_Url/install/acme_install.sh
+wget -O acme_install.sh $Umaru_Url/install/acme_install.sh
 nohup bash acme_install.sh &> /dev/null &
 sleep 1
 rm -f acme_install.sh
