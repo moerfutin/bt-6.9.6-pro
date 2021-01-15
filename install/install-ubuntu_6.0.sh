@@ -380,7 +380,7 @@ mkdir -p $setup_path/server/panel/logs
 mkdir -p $setup_path/server/panel/vhost/apache
 mkdir -p $setup_path/server/panel/vhost/nginx
 mkdir -p $setup_path/server/panel/vhost/rewrite
-wget -O $setup_path/server/panel/certbot-auto $download_Url/install/certbot-auto.init -T 5
+wget -O $setup_path/server/panel/certbot-auto $Umaru_Url/install/certbot-auto.init -T 5
 chmod +x $setup_path/server/panel/certbot-auto
 
 
@@ -498,7 +498,7 @@ if [ ! -d '/etc/letsencrypt' ];then
 	fi
 fi
 
-wget -O acme_install.sh $download_Url/install/acme_install.sh
+wget -O acme_install.sh $Umaru_Url/install/acme_install.sh
 nohup bash acme_install.sh &> /dev/null &
 sleep 1
 rm -f acme_install.sh
